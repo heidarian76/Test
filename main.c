@@ -34,6 +34,10 @@ struct tokenize {
     struct token *back;
 }*temp,*first,*first2,*help,*help1,*help2 , *myfirst;
 
+<<<<<<< HEAD
+=======
+int if_cont=1;
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
 int checkMain=0 , checkReturn=0;
 FILE *fpIR;
 int flag=0;
@@ -2185,21 +2189,49 @@ int IR_if (){
     }
 
     fprintf (fpIR , "goto L%d else L%d \nL%d\n\n" , flag , flag+1 ,flag);
+<<<<<<< HEAD
     flag=flag+2;
     IR_Generation();
     if (check_else == 1){
         fprintf (fpIR , "goto L%d\nL%d\n\n" , flag , flag-1);
+=======
+    if (check_else == 1){
+        flag=flag+3;
+    }
+    else {
+        flag=flag+2;
+    }
+    IR_Generation();
+    if (check_else == 1){
+        flag=flag-3*if_cont;
+    }
+    else {
+        flag=flag-2*if_cont;
+    }
+    if (check_else == 1){
+        fprintf (fpIR , "goto L%d\nL%d\n\n" , flag+2 , flag+1);
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
         temp=temp->next;
         temp=temp->next;
         temp=temp->next;
         IR_Generation();
+<<<<<<< HEAD
         fprintf (fpIR , "L%d\n" , flag);
         flag=flag+1;
+=======
+        fprintf (fpIR , "L%d\n" , flag+2);
+        flag=flag+3;
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
         check_else=0;
         //temp=temp->next;
     }
     else {
+<<<<<<< HEAD
         fprintf (fpIR , "L%d\n\n" , flag-1);
+=======
+        fprintf (fpIR , "L%d\n\n" , flag+1);
+        flag=flag+2;
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
         check_else=0;
         //temp=temp->next;
     }
@@ -2252,6 +2284,10 @@ int IR_while (){
     IR_Generation();
     fprintf (fpIR , "goto L%d\nL%d\n\n" , flag+2 , flag+1);
     temp=temp->next;
+<<<<<<< HEAD
+=======
+    flag=flag+3;
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
 }
 
 void IR_Generation (){
@@ -2270,7 +2306,11 @@ void IR_Generation (){
                 temp=temp->back;
                 fprintf (fpIR , "T%d = T_%d\n\n", name_index() , num);
                 num++;
+<<<<<<< HEAD
                 go_end();
+=======
+                go_virgool();
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
 
             }
 
@@ -2279,7 +2319,11 @@ void IR_Generation (){
                 temp=temp->next;
                 temp=temp->next;
                 fprintf (fpIR , "T%d \n\n", name_index());
+<<<<<<< HEAD
                 go_end();
+=======
+                go_virgool();
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
             }
             else if (state_number==3){
                 temp=temp->next;
@@ -2296,7 +2340,11 @@ void IR_Generation (){
                 temp=temp->back;
                 fprintf(fpIR , "T%d := T_%d %s T_%d\n\n" , name_index() ,num-1, help1->str , num);
                 num++;
+<<<<<<< HEAD
                 go_end();
+=======
+                go_virgool();
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
             }
             else if (state_number == 4){
                 fprintf(fpIR , "T%d := ", name_index());
@@ -2307,7 +2355,11 @@ void IR_Generation (){
                 fprintf(fpIR , "%s ", temp->str);
                 temp = temp->next;
                 fprintf(fpIR , "T%d\n\n", name_index());
+<<<<<<< HEAD
                 go_end();
+=======
+                go_virgool();
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
             }
             else if (state_number==5){
                 help1=temp;
@@ -2324,7 +2376,11 @@ void IR_Generation (){
                 temp=temp->str;
                 fprintf(fpIR , "T_%d\n\n" , num);
                 num++;
+<<<<<<< HEAD
                 go_end();
+=======
+                go_virgool();
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
             }
             else if (state_number==6){
                 help1=temp;
@@ -2340,11 +2396,19 @@ void IR_Generation (){
                 temp=temp->next;
                 fprintf (fpIR , "T%d\n\n" , name_index());
                 num++;
+<<<<<<< HEAD
                 go_end();
+=======
+                go_virgool();
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
             }
         }
         else if (strcmp(temp->str, "if")==0){
             IR_if();
+<<<<<<< HEAD
+=======
+            if_cont++;
+>>>>>>> 3b6a0b47469622d1bff979a4a78fa65b414b08a5
         }
         else if (strcmp(temp->str, "while")==0){
             IR_while ();
