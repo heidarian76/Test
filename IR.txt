@@ -1,0 +1,27 @@
+T0 := T1 
+
+T_0 = 7.2
+T2 = T_0
+
+PROCEDURE MAIN
+BEGIN
+
+IF T0 == T1 goto L0 else L1 
+L0
+
+IF T2 == T3 goto L2 else L3 
+L2
+
+T_1 = 3.1
+T2 = T_1
+
+L3
+
+T_2 = 7.1
+T0 = T_2
+
+L1
+
+RETURN 
+
+CALL MAIN 

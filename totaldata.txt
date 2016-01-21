@@ -1,0 +1,16 @@
+float a = b , b , c = 7.2 , d ;
+
+void main ( ) 
+
+{
+	if ( a == b ) {
+
+if ( c == d ) {
+			c = 3.1 ;
+		}
+		a = 7.1 ;
+	}	
+
+	return ;
+
+}
