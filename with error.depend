@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1453150655 source:e:\compiler\with errors\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+
+1453217806 source:c:\users\hamed\desktop\with errors\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+
+1453288416 source:e:\compiler\with errors last last\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+
+1453297316 source:e:\compiler\with errors last last last\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+
+1453302781 source:e:\compiler\finish\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+
+1453307085 source:c:\users\hamed\desktop\finish\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+
+1453324400 source:c:\users\hamed\desktop\finish 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+
+1453325513 source:c:\users\hamed\desktop\finish 2 last\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+
+1453333534 source:c:\users\hamed\desktop\finish 2 last last\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+
+1453333534 source:c:\users\hamed\desktop\ok\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+

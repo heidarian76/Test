@@ -1,0 +1,9 @@
+float a = b , b , c = 7.2 , d ;
+
+void main ( ) 
+
+{
+	
+	return ;
+
+}
